@@ -5,7 +5,7 @@ BioSynResCL is a command-line tool for resolving biomedical terms to their corre
 This tool was designed with the aim to improve speed, scalability and performance of resolving biomedical terms especially in large-scale datasets.
 
 # Publication
-This work, BioSynResCL, is the product of a research paper to be presented at[ the 6th IEEE International Conference on Computing and Artificial Intelligence: Technologies and Applications (IEEE CloudTech'23)](http://www.macc.ma/cloudtech23/). The authors of the paper include PhD Student Mohammed Hajhouj, Professor Mounia Abik, and Dr. Randa Zarnoufi from ENSIAS / University Mohammed V in Rabat, Morocco.
+This work, BioSynResCL, is the product of a research paper to be presented at[ the 6th IEEE International Conference on Computing and Artificial Intelligence: Technologies and Applications (IEEE CloudTech'23)](http://www.macc.ma/cloudtech23/). 
 
 # How to Build
 
