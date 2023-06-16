@@ -33,8 +33,11 @@ Where:
 * **platform** is the platform to use (CPU or OPENCL).
 
 if you use "OPENCL", you need to specify the OpenCL device Id to use for computation. To get the device use the command :
+
 <code>java -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark devices</code>
+
 You should get a result similar to this :
+
 <code>
 DEVICE QUERY | DEVICE NAME
 -------------+-------------
@@ -42,7 +45,9 @@ DEVICE QUERY | DEVICE NAME
 0.1        | Intel(R) UHD Graphics 630
 0.2        | AMD Radeon Pro 555X Compute Engine
 </code>
-Use the desired device by adding its query as a JVM parameter using -Duse-device, for example :
+
+Use the desired device by adding its query as a JVM parameter using -Duse-device, for example if we want to use Intel(R) UHD Graphics 630 from the result above, we should use -Duse-device=0.1 :
+
 <code>java **-Duse-device=0.1** -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark benchmark "Autism disorder" "vocabulary/all/terms.txt" 10 OPENCL</code>
 
 ## Run Resolution Tool
