@@ -14,9 +14,15 @@ BioSynResCL uses vocabulary datasets for term resolution. The datasets can be do
 * MeSH Terms vocabulary : Download from [here](http://89.40.6.5/msh.zip).
 
 After downloading the desired dataset, decompress its contents and use the "terms.txt" file as a parameter when running either the benchmark or the resolution tool.
+# How to Build
+
+* Clone this repository.
+* Navigate to the root directory of the project.
+* Run <code>mvn clean package</code>.
+
 ## Run Benchmark
 
-<code>java -cp target/biosynres-cl-1.0.0.jar com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark benchmark "queryTerm" "filename" "topN" "platform"</code>
+<code>java -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark benchmark "queryTerm" "filename" "topN" "platform"</code>
 
 Where:
 
@@ -27,7 +33,7 @@ Where:
 
 ## Run Resolution Tool
 
-<code>java -cp target/biosynres-cl-1.0.0.jar com.hajhouj.biosynres.cl.resolve.BioSynResolutionTool resolve "queryTerm" "acronymsFileName" "vocabularyFileName" "topN" "platform"</code>
+<code>java -cp "./target/libs/*" com.hajhouj.biosynres.cl.resolve.BioSynResolutionTool resolve "queryTerm" "acronymsFileName" "vocabularyFileName" "topN" "platform"</code>
 
 Where:
 
@@ -44,11 +50,7 @@ To run BioSynResCL, you will need:
 * Java 8 or later
 * An OpenCL compatible GPU (for OpenCL platform)
 
-# Building from Source
 
-* Clone this repository.
-* Navigate to the root directory of the project.
-* Run <code>mvn clean package</code>.
 
 # Contributing
 
