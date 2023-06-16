@@ -36,17 +36,17 @@ Where:
 
 If you opt to use OpenCL as the computational platform, you will need to specify the OpenCL device ID for computation. You can determine the available devices and their IDs by running the following command:
 
-`java -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark devices
+<code>java -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark devices</code>
 
 The output should look something like this:
 
 Use the desired device by adding its query as a JVM parameter using -Duse-device, for example if we want to use Intel(R) UHD Graphics 630 from the result above, we should use -Duse-device=0.1 :
 
-DEVICE QUERY | DEVICE NAME
+<code>DEVICE QUERY | DEVICE NAME
 -------------+-------------
 0.0          | Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
 0.1          | Intel(R) UHD Graphics 630
-0.2          | AMD Radeon Pro 555X Compute Engine
+0.2          | AMD Radeon Pro 555X Compute Engine</code>
 
 
 To use a specific device, include its query ID as a JVM parameter using -Duse-device. For example, to use the Intel(R) UHD Graphics 630 from the output above, your command should look like this:
