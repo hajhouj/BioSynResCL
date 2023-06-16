@@ -32,22 +32,26 @@ Where:
 * **topN** is the number of top results to retrieve.
 * **platform** is the platform to use (CPU or OPENCL).
 
-if you use "OPENCL", you need to specify the OpenCL device Id to use for computation. To get the device use the command :
+## Selecting OpenCL Device
 
-<code>java -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark devices</code>
+If you opt to use OpenCL as the computational platform, you will need to specify the OpenCL device ID for computation. You can determine the available devices and their IDs by running the following command:
 
-You should get a result similar to this :
+`java -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark devices
 
-<code>DEVICE QUERY | DEVICE NAME
--------------+-------------
-0.0        | Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
-0.1        | Intel(R) UHD Graphics 630
-0.2        | AMD Radeon Pro 555X Compute Engine
-</code>
+The output should look something like this:
 
 Use the desired device by adding its query as a JVM parameter using -Duse-device, for example if we want to use Intel(R) UHD Graphics 630 from the result above, we should use -Duse-device=0.1 :
 
-<code>java **-Duse-device=0.1** -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark benchmark "Autism disorder" "vocabulary/all/terms.txt" 10 OPENCL</code>
+DEVICE QUERY | DEVICE NAME
+-------------+-------------
+0.0          | Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+0.1          | Intel(R) UHD Graphics 630
+0.2          | AMD Radeon Pro 555X Compute Engine
+
+
+To use a specific device, include its query ID as a JVM parameter using -Duse-device. For example, to use the Intel(R) UHD Graphics 630 from the output above, your command should look like this:
+
+`java -Duse-device=0.1 -cp "./target/libs/*" com.hajhouj.biosynres.cl.benchmark.BioSynResBenchmark benchmark "Autism disorder" "vocabulary/all/terms.txt" 10 OPENCL`
 
 ## Run Resolution Tool
 
