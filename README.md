@@ -7,8 +7,6 @@ This tool was designed with the aim to improve speed, scalability and performanc
 # How to Use
 ## Vocabulary data
 
-Vocabulary Data
-
 BioSynResCL uses vocabulary datasets for term resolution. The datasets can be downloaded from the following links:
 
 * UMLS Terms vocabulary with all languages : Download from [here](http://89.40.6.5/all.zip).
