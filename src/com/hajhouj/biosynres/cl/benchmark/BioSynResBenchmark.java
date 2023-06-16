@@ -13,41 +13,60 @@ import com.hajhouj.biosynres.cl.Result;
 import com.hajhouj.biosynres.cl.OpenCLBioSynResolver;
 import com.hajhouj.fastsico.tools.DevicesList;
 
+/**
+ * A benchmarking class for BioSynResCL, a biomedical syntactic resolution tool.
+ */
 public class BioSynResBenchmark {
 
-	public static void main(String[] args) throws IOException {
+    /**
+     * Entry point of the benchmarking application.
+     *
+     * @param args Command line arguments.
+     *             The first argument should be the command to execute.
+     *             If the command is "devices", it lists the available OpenCL devices.
+     *             If the command is "benchmark", it performs benchmarking on the specified platform.
+     *             The second argument is the query term.
+     *             The third argument is the filename of the input file.
+     *             The fourth argument is the number of top results to retrieve.
+     *             The fifth argument is the platform to use (CPU or OPENCL).
+     * @throws IOException If an I/O error occurs while reading the input file.
+     */
+    public static void main(String[] args) throws IOException {
 
-		String command = args[0];
-		
-		if (command.equalsIgnoreCase("devices")) {
-			DevicesList.main(args);
-		} else if (command.equalsIgnoreCase("benchmark")) {
-	        String queryTerm = args[1];
-	        String filename = args[2];
-	        int topN = Integer.parseInt(args[3]);
-	        String platform = args[4];
-	        
-	        List<Result> result = null;
-	        
-	        if (platform.equalsIgnoreCase("CPU")) {
-	        	result = CPUBioSynResolver.resolve(filename, queryTerm, topN);
-	        } else if (platform.equalsIgnoreCase("OPENCL")) {
-	        	result = OpenCLBioSynResolver.resolve(filename, queryTerm, topN);
-	        } else {
-	        	System.err.println("Unknown Platform : " + platform);
-	        	System.exit(-1);
-	        }
-	         
-	        
-	        for (Result entry : result) {
-	            System.out.println("Term: " + entry.getTerm() + ", Distance: " + entry.getDistance());
-	        }
-		} else {
-			System.out.println("Unknown command : " + command);
-			System.exit(-1);
-		}
+        String command = args[0];
 
+        if (command.equalsIgnoreCase("devices")) {
+            // List available OpenCL devices
+            DevicesList.main(args);
+        } else if (command.equalsIgnoreCase("benchmark")) {
+            // Perform benchmarking
 
-	}
+            // Read command line arguments
+            String queryTerm = args[1];
+            String filename = args[2];
+            int topN = Integer.parseInt(args[3]);
+            String platform = args[4];
 
+            List<Result> result = null;
+
+            if (platform.equalsIgnoreCase("CPU")) {
+                // Resolve using CPU platform
+                result = CPUBioSynResolver.resolve(filename, queryTerm, topN);
+            } else if (platform.equalsIgnoreCase("OPENCL")) {
+                // Resolve using OpenCL platform
+                result = OpenCLBioSynResolver.resolve(filename, queryTerm, topN);
+            } else {
+                System.err.println("Unknown Platform : " + platform);
+                System.exit(-1);
+            }
+
+            // Print the results
+            for (Result entry : result) {
+                System.out.println("Term: " + entry.getTerm() + ", Distance: " + entry.getDistance());
+            }
+        } else {
+            System.out.println("Unknown command : " + command);
+            System.exit(-1);
+        }
+    }
 }
