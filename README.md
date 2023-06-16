@@ -58,5 +58,5 @@ Contributions are very welcome. Feel free to fork this project, make your change
 
 # License
 
-BioSynResCL is released under the Apache License, Version 2.0.
+BioSynResCL is released under GNU General Public License v3.0 .
 
