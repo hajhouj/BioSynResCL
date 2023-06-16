@@ -4,6 +4,12 @@ BioSynResCL is a command-line tool for resolving biomedical terms to their corre
 
 This tool was designed with the aim to improve speed, scalability and performance of resolving biomedical terms especially in large-scale datasets.
 
+# How to Build
+
+* Clone this repository.
+* Navigate to the root directory of the project.
+* Run <code>mvn clean package</code>.
+
 # How to Use
 ## Vocabulary data
 
@@ -14,11 +20,6 @@ BioSynResCL uses vocabulary datasets for term resolution. The datasets can be do
 * MeSH Terms vocabulary : Download from [here](http://89.40.6.5/msh.zip).
 
 After downloading the desired dataset, decompress its contents and use the "terms.txt" file as a parameter when running either the benchmark or the resolution tool.
-# How to Build
-
-* Clone this repository.
-* Navigate to the root directory of the project.
-* Run <code>mvn clean package</code>.
 
 ## Run Benchmark
 
