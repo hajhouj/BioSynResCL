@@ -38,8 +38,7 @@ if you use "OPENCL", you need to specify the OpenCL device Id to use for computa
 
 You should get a result similar to this :
 
-<code>
-DEVICE QUERY | DEVICE NAME
+<code>DEVICE QUERY | DEVICE NAME
 -------------+-------------
 0.0        | Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
 0.1        | Intel(R) UHD Graphics 630
