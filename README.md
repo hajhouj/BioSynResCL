@@ -18,9 +18,9 @@ This work, BioSynResCL, is the product of a research paper to be presented at[ t
 
 BioSynResCL uses vocabulary datasets for term resolution. The datasets can be downloaded from the following links:
 
-* UMLS Terms vocabulary with all languages : Download from [here](http://89.40.6.5/all.zip).
-* UMLS Terms vocabulary for English only : Download from [here](http://89.40.6.5/eng.zip).
-* MeSH Terms vocabulary : Download from [here](http://89.40.6.5/msh.zip).
+* UMLS Terms vocabulary with all languages : Download from [here](http://89.40.6.5:8080/all.zip).
+* UMLS Terms vocabulary for English only : Download from [here](http://89.40.6.5:8080/eng.zip).
+* MeSH Terms vocabulary : Download from [here](http://89.40.6.5:8080/msh.zip).
 
 After downloading the desired dataset, decompress its contents and use the "terms.txt" file as a parameter when running either the benchmark or the resolution tool.
 
