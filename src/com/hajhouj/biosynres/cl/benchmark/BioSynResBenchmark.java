@@ -1,16 +1,11 @@
 package com.hajhouj.biosynres.cl.benchmark;
 
 import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import com.hajhouj.biosynres.cl.CPUBioSynResolver;
-import com.hajhouj.biosynres.cl.Result;
 import com.hajhouj.biosynres.cl.OpenCLBioSynResolver;
+import com.hajhouj.biosynres.cl.Result;
 import com.hajhouj.fastsico.tools.DevicesList;
 
 /**
