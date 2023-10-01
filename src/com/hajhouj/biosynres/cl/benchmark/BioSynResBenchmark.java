@@ -49,6 +49,7 @@ public class BioSynResBenchmark {
 
             List<Result> result = null;
 
+            long startTime = System.nanoTime();  // Start the timer
             if (platform.equalsIgnoreCase("CPU")) {
                 // Resolve using CPU platform
                 result = CPUBioSynResolver.resolve(filename, queryTerm, topN);
@@ -59,6 +60,12 @@ public class BioSynResBenchmark {
                 System.err.println("Unknown Platform : " + platform);
                 System.exit(-1);
             }
+
+            long endTime = System.nanoTime();  // Stop the timer
+
+            // Calculate and display the elapsed time in milliseconds
+            double elapsedTimeMillis = (endTime - startTime) / 1_000_000_000.0;
+            System.out.println("Elapsed time: " + elapsedTimeMillis + " seconds");
 
             // Print the results
             for (Result entry : result) {
