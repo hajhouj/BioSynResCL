@@ -1,0 +1,11 @@
+# Citation for this repository
+If you use the code from this repository in your research, please cite the following paper:
+
+@inproceedings{hajhouj2023enhancing,
+  title={Enhancing Syntactic Resolution in Biomedical Data Processing with OpenCL: A Use Case Study},
+  author={Hajhouj, Mohammed and Abik, Mounia and Zarnoufi, Randa},
+  booktitle={2023 IEEE 6th International Conference on Cloud Computing and Artificial Intelligence: Technologies and Applications (CloudTech)},
+  pages={1--8},
+  year={2023},
+  organization={IEEE}
+}
