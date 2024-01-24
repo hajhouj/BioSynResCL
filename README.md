@@ -81,7 +81,31 @@ To run BioSynResCL, you will need:
 
 Contributions are very welcome. Feel free to fork this project, make your changes, and submit a pull request. If you have found a bug or have a feature request, please open an issue.
 
+# Citation
+If you find the code in this repository useful in your research, we kindly request that you cite our work. Here is the BibTeX entry for our paper:
+
+```
+@inproceedings{hajhouj2023enhancing,
+  title={Enhancing Syntactic Resolution in Biomedical Data Processing with OpenCL: A Use Case Study},
+  author={Hajhouj, Mohammed and Abik, Mounia and Zarnoufi, Randa},
+  booktitle={2023 IEEE 6th International Conference on Cloud Computing and Artificial Intelligence: Technologies and Applications (CloudTech)},
+  pages={1--8},
+  year={2023},
+  organization={IEEE}
+}
+```
+
 # License
 
 BioSynResCL is released under GNU General Public License v3.0 .
+
+# UMLS Data Usage and Compliance Information
+
+This project utilizes concept names derived from the UMLS Metathesaurus, a comprehensive database managed by the National Library of Medicine (NLM). The inclusion of UMLS data is specifically for benchmarking purposes in the context of accelerated syntactic resolution using OpenCL within this open-source project.
+
+**Please Note**: The usage of UMLS data is governed by the terms of the UMLS Metathesaurus License Agreement. Users of this repository are responsible for ensuring their use of the UMLS data complies with these terms. It is important to acknowledge that redistribution of the UMLS data, even in part, may be subject to restrictions as per the license agreement.
+
+For full details on the licensing terms and conditions, please refer to the [UMLS Metathesaurus License Agreement](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/license.html).
+
+We encourage all users to review the license terms and adhere to them strictly to ensure compliance with copyright laws and regulations.
 
