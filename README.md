@@ -105,7 +105,7 @@ This project utilizes concept names derived from the UMLS Metathesaurus, a compr
 
 **Please Note**: The usage of UMLS data is governed by the terms of the UMLS Metathesaurus License Agreement. Users of this repository are responsible for ensuring their use of the UMLS data complies with these terms. It is important to acknowledge that redistribution of the UMLS data, even in part, may be subject to restrictions as per the license agreement.
 
-For full details on the licensing terms and conditions, please refer to the [UMLS Metathesaurus License Agreement](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/license.html).
+For full details on the licensing terms and conditions, please refer to the [UMLS Metathesaurus License Agreement](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/license_agreement.html).
 
 We encourage all users to review the license terms and adhere to them strictly to ensure compliance with copyright laws and regulations.
 
